@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ESAIAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap & Fonts -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/smartphoto@1.1.0/css/smartphoto.min.css">
+
+    <!-- Cartoon Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="150">
+    <div class="esaias-container">
+        <div style="background-color: powderblue;" class="esaias-row heading-row">
+            <div class="navbar-container fixed-top">
+                <nav class="navbar navbar-style navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="img/logo7.png" alt="Logo" width="50" height="50"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div style="display: flex; flex-flow: row; align-items: center;">
+                            <span id="mobile-title-label" style="margin-right: 4px;"></span>
+                            <span class="navbar-toggler-icon">
+                            </span>
+                            </div>
+
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav nav-pills">
+                                <li class="nav-item"><a class="nav-link" id="about-link" href="#about">What is
+                                        ESAIAS?</a></li>
+                                <li class="nav-item"><a class="nav-link" id="solution-link" href="#solution">Our
+                                        Solution</a></li>
+                                <li class="nav-item"><a class="nav-link" id="editor-link" href="#editor">Editor</a></li>
+                                <li class="nav-item"><a class="nav-link" id="team-link" href="#team">Team</a></li>
+                                <li class="nav-item"><a class="nav-link" id="contact-link" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <video autoplay muted id="bg-video"></video>
+
+            <div class="title-box overlay">
+                <h3 class="about-title">
+                    Leveraging the power of generative agents <br> to support adolescents facing social challenges
+                </h3>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="esaias-row" id="about">
+                <h1 class="about-title">What is ESAIAS?</h1>
+                <p class="about-text">
+                    ESAIAS stands for Enhancing the social skills of adolescents with autism spectrum disorder through a
+                    gamified interactive artificial society of generative agents. This project contains a virtual
+                    school environment that is designed to transform social and emotional learning (SEL) for adolescents
+                    with
+                    autism spectrum disorder (ASD) in Hong Kong's integrated education setting.
+                    We leverage generative artificial intelligence (GenAI) inside human-led role-playing scenarios to
+                    address the key limitations of conventional approaches,
+                    which require extensive therapist involvement, physical presence, and fixed scenarios. Instead,
+                    ESAIAS offers scalable, accessible,
+                    and adaptive training inside a virtual school, giving students the opportunity to complete tasks
+                    involving collaboration, conflict resolution, and emotional
+                    regulation by interacting with GenAI agents.
+                </p>
+            </div>
+
+            <div class="esaias-row" id="solution">
+                <h1 class="solution-title">Our Solution</h1>
+                <p class="solution-text">
+                    Our innovative solution incorporates an AI-enabled multiplatform approach that is ideally suited to
+                    tablets and optimised for standalone mobile devices.
+                    Behind the slick front-end we've designed an intuitive, easily customisable LLM editor that allows
+                    you to define your virtual cast of characters
+                    and their personalities without any prior coding knowledge. Our approach is research-based,
+                    co-created with certified therapists and tested on students.
+                </p>
+            </div>
+
+            <div class="esaias-row" id="editor">
+                <!-- <h1 class="editor-title">Editor</h1>
+                <p class="editor-text">
+                    Our custom-built scenario editor makes creating new role-playing situations easier than ever before.
+                    With just a few clicks in our node-based editor, you can personalise agent behaviour and their
+                    relationships,
+                    ideally suited to those without a background in agentic AI.
+                </p>
+                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario1.png');"></div>
+                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario2.png');"></div>
+                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario3.png');"></div>
+                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario4.png');"></div> -->
+                <div id="image-viewer">
+                    <h1 class="editor-title">Editor</h1>
+                    <p class="editor-text">
+                        Our custom-built scenario editor makes creating new role-playing situations easier than ever
+                        before.
+                        With just a few clicks in our node-based editor, you can personalise agent behaviour and their
+                        relationships,
+                        ideally suited to those without a background in agentic AI.
+                    </p>
+                    <div id="image-viewer-holder" class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="3"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/tools/scenario1.png" class="js-smartPhoto"
+                                    data-caption="Event flow editor" data-id="main-editor" data-group="editor" />
+                                <img src="img/tools/scenario1.png" class="d-block w-100 h-80" />
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/tools/scenario2.png" class="js-smartPhoto"
+                                    data-caption="Game character settings" data-id="character-settings"
+                                    data-group="editor" />
+                                <img src="img/tools/scenario2.png" class="d-block w-100 h-80" />
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/tools/scenario3.png" class="js-smartPhoto"
+                                    data-caption="Relationships settings" data-id="relationships-settings"
+                                    data-group="editor" />
+                                <img src="img/tools/scenario3.png" class="d-block w-100 h-80" />
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/tools/scenario4.png" class="js-smartPhoto"
+                                    data-caption="Config file preview" data-id="config-file" data-group="editor" />
+                                <img src="img/tools/scenario4.png" class="d-block w-100" />
+                                </a>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#image-viewer-holder"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#image-viewer-holder"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="esaias-row" id="team">
+                <h1 class="team-title">The Team</h1>
+                <div class="team-container mt-5">
+                    <div class="team-member">
+                        <img src="img/background/Richard.png" class="team-img mb-2" alt="Richard Li Chen">
+                        <div class="team-text-box">
+                            <h5>Richard Li Chen</h5>
+                            <small class="team-role">Asst Professor</small>
+                            <small class="team-dept">APSS/Computing</small>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/background/Dan.png" class="team-img mb-2" alt="Daniel Archer">
+                        <div class="team-text-box">
+                            <h5>Daniel Archer</h5>
+                            <small class="team-role">Research Associate</small>
+                            <small class="team-dept">Computing</small>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/background/Dongpu.png" class="team-img mb-2" alt="Dongpu Luo">
+                        <div class="team-text-box">
+                            <h5>Dongpu Luo</h5>
+                            <small class="team-role">Research Assistant</small>
+                            <small class="team-dept">Computing</small>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/background/Jerry.png" class="team-img mb-2" alt="Jerry Fu">
+                        <div class="team-text-box">
+                            <h5>Jerry Zhang Fu</h5>
+                            <small class="team-role">Research Assistant</small>
+                            <small class="team-dept">Computing</small>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/background/Gina.png" class="team-img mb-2" alt="Gina">
+                        <div class="team-text-box">
+                            <h5>Gina Wu Jie Gao</h5>
+                            <small class="team-role">Research Assistant</small>
+                            <small class="team-dept">APSS</small>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/background/HongMing.png" class="team-img mb-2" alt="Hong Ming">
+                        <div class="team-text-box">
+                            <h5>Hong Ming</h5>
+                            <small class="team-role">Masters Student</small>
+                            <small class="team-dept">AMA</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="esaias-row d-flex flex-column">
+                <div class="contact-text-box text-center" id="contact-text">
+                    <h1 class="contact-title">Contact Us</h1>
+                    If you're interested in participating, please contact us at <EMAIL>test@test_nonexist.com2
+                    </EMAIL>
+                </div>
+                <footer class="mt-auto flex-column d-flex align-items-center">
+                    <div class="footerbar">
+                        <img src="img/Corporate-Logo_RGB.jpg">
+                        <img src="img/polyu-comp-logo.png">
+                        <img src="img/APSS_logo.png">
+                    </div>
+                    <div class="footer-text">&copy; 2025 ESAIAS Team. All rights reserved.</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    window.addEventListener('DOMContentLoaded', function () {
+        new SmartPhoto(".js-smartPhoto");
+    });
+
+    const esaisEle = document.querySelector(".esaias-container");
+    esaisEle.addEventListener("scrollsnapchange", (event) => {
+        document.querySelectorAll(".nav-link").forEach((el) => {
+            el.classList.remove('active');
+        });
+        if (document.querySelector(`#${event.snapTargetBlock.id}-link`) !== null) {
+            document.querySelector(`#${event.snapTargetBlock.id}-link`).classList.add('active');
+            document.querySelector("#mobile-title-label").innerHTML = event.snapTargetBlock.id.toUpperCase() ;
+        }else{
+            document.querySelector("#mobile-title-label").innerHTML = "" ;
+        }
+
+    });
+
+    const videoElement = document.getElementById('bg-video');
+    const totalVideos = 7;
+    const videoFolder = 'videos/';
+    const videoBaseName = 'showcase';
+    let currentVideo = 1;
+
+    function playNextVideo() {
+        const videoPath = `${videoFolder}${videoBaseName}${currentVideo}.mp4`;
+        videoElement.src = videoPath;
+        videoElement.load();
+        videoElement.play();
+        currentVideo = (currentVideo % totalVideos) + 1;
+    }
+    videoElement.addEventListener('ended', playNextVideo);
+    playNextVideo();
+</script>
+
+
+<!-- <script>
+    const layers = document.querySelectorAll('.editor-bg-layer');
+    let currentLayer = 0;
+
+    function showNextEditorImage() {
+        layers.forEach((layer, index) => {
+            layer.classList.toggle('active', index === currentLayer);
+        });
+        currentLayer = (currentLayer + 1) % layers.length;
+    }
+
+    showNextEditorImage();
+    setInterval(showNextEditorImage, 5000);
+</script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/smartphoto@1.1.0/js/smartphoto.min.js"></script>
+
+</html>
