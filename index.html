@@ -2,296 +2,462 @@
 <html lang="en">
 
 <head>
-    <title>ESAIAS</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
-    <meta name="description" content="Enhance social and emotional learning of adolescents with autism spectrum disorder through a gamified interactive virtual community of generative agents (ESAIAS)">
-    <link rel="canonical" href="https://chenli.me/esaias">
-
-    <!-- Bootstrap & Fonts -->
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/smartphoto@1.1.0/css/smartphoto.min.css">
-
-    <!-- Cartoon Font -->
+    <title>ESAIAS</title>
+    <meta name="description"
+        content="Enhance social and emotional learning of adolescents with autism spectrum disorder through a gamified interactive virtual community of generative agents (ESAIAS)">
+    <link rel="canonical" href="https://chenli.me/esaias/">
+    <link rel="alternate" hreflang="en" href="https://chenli.me/esaias/?lang=en">
+    <link rel="alternate" hreflang="zh-Hant" href="https://chenli.me/esaias/?lang=zh-Hant">
+    <link rel="alternate" hreflang="x-default" href="https://chenli.me/esaias/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css?v=20260727-3">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="js/main.js?v=20260727-3" defer></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="150">
-    <div class="esaias-container">
-        <div style="background-color: powderblue;" class="esaias-row heading-row">
-            <div class="navbar-container fixed-top">
-                <nav class="navbar navbar-style navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="img/logo7.png" alt="Logo" width="50" height="50"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <div style="display: flex; flex-flow: row; align-items: center;">
-                            <span id="mobile-title-label" style="margin-right: 4px;"></span>
-                            <span class="navbar-toggler-icon">
-                            </span>
-                            </div>
+<body>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
 
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav nav-pills">
-                                <li class="nav-item"><a class="nav-link" id="about-link" href="#about">What is
-                                        ESAIAS?</a></li>
-                                <li class="nav-item"><a class="nav-link" id="solution-link" href="#solution">Our
-                                        Solution</a></li>
-                                <li class="nav-item"><a class="nav-link" id="editor-link" href="#editor">Editor</a></li>
-                                <li class="nav-item"><a class="nav-link" id="team-link" href="#team">Team</a></li>
-                                <li class="nav-item"><a class="nav-link" id="contact-link" href="#contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+            <a class="brand-link" href="#top" aria-label="ESAIAS home" data-i18n-aria-label="nav.home">
+                <img src="img/logo7.png" alt="" width="52" height="52">
+                <span>ESAIAS</span>
+            </a>
+
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about" data-section-key="nav.about" data-i18n="nav.about">What is ESAIAS?</a></li>
+                <li><a href="#solution" data-section-key="nav.solution" data-i18n="nav.solution">Our Solution</a></li>
+                <li><a href="#scenarios" data-section-key="nav.scenarios" data-i18n="nav.scenarios">Scenarios</a></li>
+                <li><a href="#editor" data-section-key="nav.editor" data-i18n="nav.editor">Editor</a></li>
+                <li><a href="#team" data-section-key="nav.team" data-i18n="nav.team">Team</a></li>
+                <li><a href="#recognition" data-section-key="nav.recognition"
+                        data-i18n="nav.recognition">Recognition</a></li>
+                <li><a href="#contact" data-section-key="nav.contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="language.label">
+                <button type="button" data-language="en" aria-pressed="true">EN</button>
+                <button type="button" data-language="zh-Hant" aria-pressed="false">繁</button>
             </div>
 
-            <video autoplay muted id="bg-video"></video>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Open navigation" data-i18n-aria-label="nav.open">
+                <span id="nav-current" data-i18n="nav.overview">Overview</span>
+                <i class="nav-toggle-icon nav-toggle-open" data-lucide="menu" aria-hidden="true"></i>
+                <i class="nav-toggle-icon nav-toggle-close" data-lucide="x" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
 
-            <div class="title-box overlay">
-                <h3 class="about-title">
-                    Leveraging the power of generative agents <br> to support adolescents facing social challenges
-                </h3>
+    <main id="main-content">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                poster="img/hero-poster.jpg" aria-hidden="true">
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal" data-reveal="scale">
+                <p class="hero-kicker" data-i18n="hero.kicker">A generative-agent virtual school</p>
+                <h1 id="hero-title">ESAIAS</h1>
+                <p class="hero-summary" data-i18n="hero.summary">Leveraging the power of generative agents to support
+                    adolescents facing social challenges.</p>
             </div>
-        </div>
+            <a class="hero-scroll-cue" href="#about" aria-label="Explore ESAIAS"
+                data-i18n-aria-label="hero.explore"><i data-lucide="chevron-down" aria-hidden="true"></i></a>
+        </section>
 
-        <div class="wrapper">
-            <div class="esaias-row" id="about">
-                <h1 class="about-title">What is ESAIAS?</h1>
-                <p class="about-text">
-                    ESAIAS stands for Enhancing the social skills of adolescents with autism spectrum disorder through a
-                    gamified interactive artificial society of generative agents. This project contains a virtual
-                    school environment that is designed to transform social and emotional learning (SEL) for adolescents
-                    with
-                    autism spectrum disorder (ASD) in Hong Kong's integrated education setting.
-                    We leverage generative artificial intelligence (GenAI) inside human-led role-playing scenarios to
-                    address the key limitations of conventional approaches,
-                    which require extensive therapist involvement, physical presence, and fixed scenarios. Instead,
-                    ESAIAS offers scalable, accessible,
-                    and adaptive training inside a virtual school, giving students the opportunity to complete tasks
-                    involving collaboration, conflict resolution, and emotional
-                    regulation by interacting with GenAI agents.
-                </p>
-            </div>
+        <section class="story-section story-about" id="about" aria-labelledby="about-title" data-parallax>
+            <div class="section-shade"></div>
+            <div class="about-layout">
+                <div class="story-content reveal" data-reveal="left">
+                    <p class="section-number" data-i18n="about.number">01 / Project</p>
+                    <h2 id="about-title" data-i18n="about.title">What is ESAIAS?</h2>
+                    <p data-i18n="about.body1">ESAIAS stands for Enhancing the social skills of adolescents with autism
+                        spectrum disorder through a gamified interactive artificial society of generative agents. The
+                        project creates a virtual school environment for social and emotional learning in Hong Kong's
+                        integrated education setting.</p>
+                    <p data-i18n="about.body2">Human-led role-playing scenarios and generative AI give students
+                        accessible, adaptive opportunities to practise collaboration, conflict resolution and emotional
+                        regulation with virtual agents.</p>
+                </div>
 
-            <div class="esaias-row" id="solution">
-                <h1 class="solution-title">Our Solution</h1>
-                <p class="solution-text">
-                    Our innovative solution incorporates an AI-enabled multiplatform approach that is ideally suited to
-                    tablets and optimised for standalone mobile devices.
-                    Behind the slick front-end we've designed an intuitive, easily customisable LLM editor that allows
-                    you to define your virtual cast of characters
-                    and their personalities without any prior coding knowledge. Our approach is research-based,
-                    co-created with certified therapists and tested on students.
-                </p>
-            </div>
-
-            <div class="esaias-row" id="editor">
-                <!-- <h1 class="editor-title">Editor</h1>
-                <p class="editor-text">
-                    Our custom-built scenario editor makes creating new role-playing situations easier than ever before.
-                    With just a few clicks in our node-based editor, you can personalise agent behaviour and their
-                    relationships,
-                    ideally suited to those without a background in agentic AI.
-                </p>
-                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario1.png');"></div>
-                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario2.png');"></div>
-                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario3.png');"></div>
-                <div class="editor-bg-layer" style="background-image: url('img/tools/scenario4.png');"></div> -->
-                <div id="image-viewer">
-                    <h1 class="editor-title">Editor</h1>
-                    <p class="editor-text">
-                        Our custom-built scenario editor makes creating new role-playing situations easier than ever
-                        before.
-                        With just a few clicks in our node-based editor, you can personalise agent behaviour and their
-                        relationships,
-                        ideally suited to those without a background in agentic AI.
+                <aside class="sel-panel reveal" data-reveal="right" aria-labelledby="sel-title">
+                    <p class="sel-label"><span class="sel-label-icon"><i data-lucide="heart-handshake"
+                                aria-hidden="true"></i></span><span data-i18n="sel.label">SEL learning framework</span>
                     </p>
-                    <div id="image-viewer-holder" class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#image-viewer-holder" data-bs-slide-to="3"
-                                aria-label="Slide 3"></button>
+                    <h3 id="sel-title" data-i18n="sel.title">What is social and emotional learning?</h3>
+                    <p data-i18n="sel.body">Social and emotional learning (SEL) helps learners understand and manage
+                        emotions, empathise with others, build relationships and make responsible decisions.</p>
+                    <p data-i18n="sel.esaias">ESAIAS turns these broad competencies into repeatable practice through
+                        supported interactions in a virtual school.</p>
+
+                    <ul class="sel-competencies" aria-label="Five SEL competencies"
+                        data-i18n-aria-label="sel.competenciesLabel">
+                        <li><span class="sel-competency-icon"><i data-lucide="scan-face"
+                                    aria-hidden="true"></i></span><span data-i18n="sel.selfAwareness">Self-awareness</span>
+                        </li>
+                        <li><span class="sel-competency-icon"><i data-lucide="sliders-horizontal"
+                                    aria-hidden="true"></i></span><span data-i18n="sel.selfManagement">Self-management</span>
+                        </li>
+                        <li><span class="sel-competency-icon"><i data-lucide="eye"
+                                    aria-hidden="true"></i></span><span data-i18n="sel.socialAwareness">Social awareness</span>
+                        </li>
+                        <li><span class="sel-competency-icon"><i data-lucide="handshake"
+                                    aria-hidden="true"></i></span><span data-i18n="sel.relationshipSkills">Relationship
+                                    skills</span></li>
+                        <li><span class="sel-competency-icon"><i data-lucide="scale"
+                                    aria-hidden="true"></i></span><span
+                                data-i18n="sel.responsibleDecisions">Responsible decision-making</span></li>
+                    </ul>
+
+                    <a class="sel-source" href="https://casel.org/fundamentals-of-sel/what-is-the-casel-framework/"
+                        target="_blank" rel="noopener"><span data-i18n="sel.source">Explore the CASEL SEL
+                            framework</span><i data-lucide="external-link" aria-hidden="true"></i></a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="story-section story-solution" id="solution" aria-labelledby="solution-title" data-parallax>
+            <div class="section-shade"></div>
+            <div class="story-content story-content-right reveal" data-reveal="right">
+                <p class="section-number" data-i18n="solution.number">02 / Approach</p>
+                <h2 id="solution-title" data-i18n="solution.title">Our Solution</h2>
+                <p data-i18n="solution.body1">Our AI-enabled, multiplatform approach is designed for tablets and standalone mobile devices. It
+                    combines a welcoming virtual-school experience with adaptable role-playing scenarios.</p>
+                <p data-i18n="solution.body2">An intuitive LLM editor lets practitioners define characters, personalities and relationships
+                    without prior coding knowledge. The approach is research-based, co-created with certified
+                    therapists and tested with students.</p>
+            </div>
+        </section>
+
+        <section class="scenarios-section" id="scenarios" aria-labelledby="scenarios-title">
+            <div class="scenarios-inner">
+                <div class="scenarios-heading reveal" data-reveal="up">
+                    <p class="section-number" data-i18n="scenarios.number">03 / Learning contexts</p>
+                    <h2 id="scenarios-title" data-i18n="scenarios.title">Learning across the school day</h2>
+                    <p data-i18n="scenarios.intro">ESAIAS places role-playing in familiar school spaces, allowing practice to move between
+                        structured classroom tasks and informal peer interaction.</p>
+                </div>
+
+                <div class="scenario-grid">
+                    <article class="scenario-item reveal" data-reveal="up" data-delay="0">
+                        <a href="img/background/1.jpg" target="_blank" rel="noopener">
+                            <img src="img/background/1.jpg"
+                                alt="Students and a teacher taking part in an art classroom activity" loading="lazy"
+                                data-i18n-alt="scenarios.classroomAlt">
+                        </a>
+                        <div class="scenario-copy">
+                            <p class="scenario-label"><span class="icon-well"><i data-lucide="palette"
+                                        aria-hidden="true"></i></span><span
+                                    data-i18n="scenarios.classroomLabel">Classroom</span></p>
+                            <h3 data-i18n="scenarios.classroomTitle">Collaborative activities</h3>
+                            <p data-i18n="scenarios.classroomBody">Students can practise joining a group, asking for help and contributing to a shared
+                                activity while facilitators retain control of the scenario.</p>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="./img/tools/scenario1.png" class="js-smartPhoto"
-                                    data-caption="Event flow editor" data-id="main-editor" data-group="editor" />
-                                <img src="img/tools/scenario1.png" class="d-block w-100 h-80" />
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="./img/tools/scenario2.png" class="js-smartPhoto"
-                                    data-caption="Game character settings" data-id="character-settings"
-                                    data-group="editor" />
-                                <img src="img/tools/scenario2.png" class="d-block w-100 h-80" />
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="./img/tools/scenario3.png" class="js-smartPhoto"
-                                    data-caption="Relationships settings" data-id="relationships-settings"
-                                    data-group="editor" />
-                                <img src="img/tools/scenario3.png" class="d-block w-100 h-80" />
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="./img/tools/scenario4.png" class="js-smartPhoto"
-                                    data-caption="Config file preview" data-id="config-file" data-group="editor" />
-                                <img src="img/tools/scenario4.png" class="d-block w-100" />
-                                </a>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#image-viewer-holder"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#image-viewer-holder"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                    </article>
+
+                    <article class="scenario-item reveal" data-reveal="up" data-delay="80">
+                        <a href="img/background/5.jpg" target="_blank" rel="noopener">
+                            <img src="img/background/5.jpg"
+                                alt="Students and a teacher talking together beside the school running track"
+                                loading="lazy" data-i18n-alt="scenarios.schoolyardAlt">
+                        </a>
+                        <div class="scenario-copy">
+                            <p class="scenario-label"><span class="icon-well"><i data-lucide="messages-square"
+                                        aria-hidden="true"></i></span><span
+                                    data-i18n="scenarios.schoolyardLabel">Schoolyard</span></p>
+                            <h3 data-i18n="scenarios.schoolyardTitle">Everyday conversations</h3>
+                            <p data-i18n="scenarios.schoolyardBody">Open schoolyard scenes support informal exchanges, turn-taking and the kinds of social
+                                decisions that happen between lessons.</p>
                         </div>
+                    </article>
+
+                    <article class="scenario-item reveal" data-reveal="up" data-delay="160">
+                        <a href="img/background/8.jpg" target="_blank" rel="noopener">
+                            <img src="img/background/8.jpg"
+                                alt="Students and facilitators seated around a table for a group discussion"
+                                loading="lazy" data-i18n-alt="scenarios.groupAlt">
+                        </a>
+                        <div class="scenario-copy">
+                            <p class="scenario-label"><span class="icon-well"><i data-lucide="users-round"
+                                        aria-hidden="true"></i></span><span
+                                    data-i18n="scenarios.groupLabel">Small group</span></p>
+                            <h3 data-i18n="scenarios.groupTitle">Guided reflection</h3>
+                            <p data-i18n="scenarios.groupBody">Structured group settings give educators space to pause, debrief and adjust agent roles
+                                around a social and emotional learning objective.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section" id="demos" aria-labelledby="demos-title">
+            <div class="section-shade"></div>
+            <div class="demo-inner">
+                <div class="demo-copy reveal" data-reveal="left">
+                    <p class="section-number" data-i18n="demos.number">04 / Scenario demos</p>
+                    <h2 id="demos-title" data-i18n="demos.title">Watch ESAIAS in action</h2>
+                    <p data-i18n="demos.intro">Four short walkthroughs show how social and emotional learning moves
+                        from everyday conversation to collaborative activities.</p>
+
+                    <div class="demo-tabs" role="tablist" aria-label="Scenario demos"
+                        data-i18n-aria-label="demos.tabs">
+                        <button type="button" role="tab" aria-selected="true" aria-controls="scenario-video-panel"
+                            id="demo-tab-1" data-demo-index="0"
+                            data-video-src="videos/scenarios/joining-a-new-class.mp4"
+                            data-poster="img/scenarios/joining-a-new-class.jpg"
+                            data-title-key="demos.scenario1Title" data-body-key="demos.scenario1Body">
+                            <span class="demo-tab-icon"><i data-lucide="message-circle" aria-hidden="true"></i></span>
+                            <span class="demo-tab-copy"><strong data-i18n="demos.scenario1Title">Joining a New
+                                    Class</strong><small>00:50</small></span>
+                        </button>
+                        <button type="button" role="tab" aria-selected="false" aria-controls="scenario-video-panel"
+                            id="demo-tab-2" data-demo-index="1" tabindex="-1"
+                            data-video-src="videos/scenarios/schoolyard-collaboration.mp4"
+                            data-poster="img/scenarios/schoolyard-collaboration.jpg"
+                            data-title-key="demos.scenario2Title" data-body-key="demos.scenario2Body">
+                            <span class="demo-tab-icon"><i data-lucide="users-round" aria-hidden="true"></i></span>
+                            <span class="demo-tab-copy"><strong data-i18n="demos.scenario2Title">Schoolyard
+                                    Collaboration</strong><small>01:05</small></span>
+                        </button>
+                        <button type="button" role="tab" aria-selected="false" aria-controls="scenario-video-panel"
+                            id="demo-tab-3" data-demo-index="2" tabindex="-1"
+                            data-video-src="videos/scenarios/visual-art-class.mp4"
+                            data-poster="img/scenarios/visual-art-class.jpg"
+                            data-title-key="demos.scenario3Title" data-body-key="demos.scenario3Body">
+                            <span class="demo-tab-icon"><i data-lucide="palette" aria-hidden="true"></i></span>
+                            <span class="demo-tab-copy"><strong data-i18n="demos.scenario3Title">Visual Art
+                                    Class</strong><small>00:55</small></span>
+                        </button>
+                        <button type="button" role="tab" aria-selected="false" aria-controls="scenario-video-panel"
+                            id="demo-tab-4" data-demo-index="3" tabindex="-1"
+                            data-video-src="videos/scenarios/preparing-a-farewell-party.mp4"
+                            data-poster="img/scenarios/preparing-a-farewell-party.jpg"
+                            data-title-key="demos.scenario4Title" data-body-key="demos.scenario4Body">
+                            <span class="demo-tab-icon"><i data-lucide="gift" aria-hidden="true"></i></span>
+                            <span class="demo-tab-copy"><strong data-i18n="demos.scenario4Title">Preparing a Farewell
+                                    Party</strong><small>01:20</small></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="demo-stage reveal" data-reveal="right" id="scenario-video-panel" role="tabpanel"
+                    aria-labelledby="demo-tab-1">
+                    <div class="demo-video-frame">
+                        <video id="scenario-video" controls playsinline preload="metadata"
+                            poster="img/scenarios/joining-a-new-class.jpg" aria-labelledby="demo-active-title"></video>
+                    </div>
+                    <div class="demo-caption" aria-live="polite">
+                        <span class="demo-caption-icon"><i data-lucide="play" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 id="demo-active-title" data-i18n="demos.scenario1Title">Joining a New Class</h3>
+                            <p id="demo-description" data-i18n="demos.scenario1Body">Practise listening to
+                                introductions, responding to peers and beginning a conversation in class.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="editor-section" id="editor" aria-labelledby="editor-title">
+            <div class="editor-sticky">
+                <div class="editor-layout">
+                    <div class="editor-copy reveal" data-reveal="left">
+                        <p class="section-number" data-i18n="editor.number">05 / Scenario design</p>
+                        <h2 id="editor-title" data-i18n="editor.title">Editor</h2>
+                        <p data-i18n="editor.body">Build new role-playing situations with a node-based editor that makes agent behaviour and
+                            relationships understandable to people without an agentic AI background.</p>
+
+                        <div class="editor-tabs" role="tablist" aria-label="Editor views"
+                            data-i18n-aria-label="editor.views">
+                            <button type="button" role="tab" aria-selected="true" aria-controls="editor-frame-1"
+                                id="editor-tab-1" data-editor-index="0"><i data-lucide="workflow"
+                                    aria-hidden="true"></i><span data-i18n="editor.flow">Event flow</span></button>
+                            <button type="button" role="tab" aria-selected="false" aria-controls="editor-frame-2"
+                                id="editor-tab-2" data-editor-index="1"><i data-lucide="users-round"
+                                    aria-hidden="true"></i><span data-i18n="editor.characters">Characters</span></button>
+                            <button type="button" role="tab" aria-selected="false" aria-controls="editor-frame-3"
+                                id="editor-tab-3" data-editor-index="2"><i data-lucide="git-branch"
+                                    aria-hidden="true"></i><span
+                                    data-i18n="editor.relationships">Relationships</span></button>
+                            <button type="button" role="tab" aria-selected="false" aria-controls="editor-frame-4"
+                                id="editor-tab-4" data-editor-index="3"><i data-lucide="file-output"
+                                    aria-hidden="true"></i><span data-i18n="editor.export">Export</span></button>
+                        </div>
+                    </div>
+
+                    <div class="editor-media reveal" data-reveal="right">
+                        <div class="editor-frame-stack">
+                            <figure class="editor-frame is-active" id="editor-frame-1" role="tabpanel"
+                                aria-labelledby="editor-tab-1">
+                                <a href="img/tools/scenario1.png" target="_blank" rel="noopener">
+                                    <img src="img/tools/scenario1.png" alt="Event flow editor showing connected tasks"
+                                        loading="lazy" data-i18n-alt="editor.flowAlt">
+                                </a>
+                            </figure>
+                            <figure class="editor-frame" id="editor-frame-2" role="tabpanel"
+                                aria-labelledby="editor-tab-2" aria-hidden="true">
+                                <a href="img/tools/scenario2.png" target="_blank" rel="noopener">
+                                    <img src="img/tools/scenario2.png" alt="Game character settings in the ESAIAS editor"
+                                        loading="lazy" data-i18n-alt="editor.charactersAlt">
+                                </a>
+                            </figure>
+                            <figure class="editor-frame" id="editor-frame-3" role="tabpanel"
+                                aria-labelledby="editor-tab-3" aria-hidden="true">
+                                <a href="img/tools/scenario3.png" target="_blank" rel="noopener">
+                                    <img src="img/tools/scenario3.png" alt="Relationship settings between virtual agents"
+                                        loading="lazy" data-i18n-alt="editor.relationshipsAlt">
+                                </a>
+                            </figure>
+                            <figure class="editor-frame" id="editor-frame-4" role="tabpanel"
+                                aria-labelledby="editor-tab-4" aria-hidden="true">
+                                <a href="img/tools/scenario4.png" target="_blank" rel="noopener">
+                                    <img src="img/tools/scenario4.png" alt="Configuration file preview and export screen"
+                                        loading="lazy" data-i18n-alt="editor.exportAlt">
+                                </a>
+                            </figure>
+                        </div>
+                        <p class="editor-caption" id="editor-caption" aria-live="polite"
+                            data-i18n="editor.caption1">Shape the sequence of tasks and events.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="esaias-row" id="team">
-                <h1 class="team-title">The Team</h1>
-                <div class="team-container mt-5">
-                    <div class="team-member">
-                        <img src="img/background/Richard.png" class="team-img mb-2" alt="Richard Li Chen">
-                        <div class="team-text-box">
-                            <h5>Chen 'Richard' Li</h5>
-                            <small class="team-role">Asst. Professor</small>
-                            <small class="team-dept">PolyU APSS &amp; COMP</small>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/background/Dan.png" class="team-img mb-2" alt="Daniel Archer">
-                        <div class="team-text-box">
-                            <h5>Daniel Archer</h5>
-                            <small class="team-role">Research Associate</small>
-                            <small class="team-dept">PolyU COMP</small>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/background/Dongpu.png" class="team-img mb-2" alt="Dongpu Luo">
-                        <div class="team-text-box">
-                            <h5>Dongpu Luo</h5>
-                            <small class="team-role">Research Assistant</small>
-                            <small class="team-dept">PolyU COMP</small>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/background/Jerry.png" class="team-img mb-2" alt="Jerry Fu">
-                        <div class="team-text-box">
-                            <h5>Jerry Zhang Fu</h5>
-                            <small class="team-role">Research Assistant</small>
-                            <small class="team-dept">PolyU COMP</small>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/background/Gina.png" class="team-img mb-2" alt="Gina">
-                        <div class="team-text-box">
-                            <h5>Gina Wujie Gao</h5>
-                            <small class="team-role">Research Assistant</small>
-                            <small class="team-dept">PolyU APSS</small>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/background/HongMing.png" class="team-img mb-2" alt="Hong Ming">
-                        <div class="team-text-box">
-                            <h5>Hong Ming Ma</h5>
-                            <small class="team-role">Alumnus</small>
-                            <small class="team-dept">PolyU AMA</small>
-                        </div>
-                    </div>
-                </div>
+            <div class="editor-scroll-steps" aria-hidden="true">
+                <div data-editor-step="0"></div>
+                <div data-editor-step="1"></div>
+                <div data-editor-step="2"></div>
+                <div data-editor-step="3"></div>
             </div>
+        </section>
 
-            <div id="contact" class="esaias-row d-flex flex-column">
-                <div class="contact-text-box text-center" id="contact-text">
-                    <h1 class="contact-title">Contact Us</h1>
-                    If you're interested in participating, please contact Richard at <EMAIL>richard-chen.li@polyu.edu.hk</EMAIL>
+        <section class="team-section" id="team" aria-labelledby="team-title">
+            <div class="section-shade"></div>
+            <div class="team-inner">
+                <div class="section-heading reveal" data-reveal="up">
+                    <p class="section-number" data-i18n="team.number">06 / People</p>
+                    <h2 id="team-title" data-i18n="team.title">The Team</h2>
                 </div>
-                <footer class="mt-auto flex-column d-flex align-items-center">
-                    <div class="footerbar">
-                        <img src="img/Corporate-Logo_RGB.jpg">
-                        <img src="img/polyu-comp-logo.png">
-                        <img src="img/APSS_logo.png">
-                    </div>
-                    <div class="footer-text">&copy; 2025 ESAIAS Team. All rights reserved.</div>
-                </footer>
+
+                <div class="team-grid">
+                    <article class="team-member reveal" data-reveal="up" data-delay="0">
+                        <img src="img/background/Richard.png" alt="Chen 'Richard' Li">
+                        <h3>Chen 'Richard' Li</h3>
+                        <p data-i18n="team.assistantProfessor">Asst. Professor</p>
+                        <small>PolyU APSS &amp; COMP</small>
+                    </article>
+                    <article class="team-member reveal" data-reveal="up" data-delay="60">
+                        <img src="img/background/Dan.png" alt="Daniel Archer">
+                        <h3>Daniel Archer</h3>
+                        <p data-i18n="team.researchAssociate">Research Associate</p>
+                        <small>PolyU COMP</small>
+                    </article>
+                    <article class="team-member reveal" data-reveal="up" data-delay="120">
+                        <img src="img/background/Dongpu.png" alt="Dongpu Luo">
+                        <h3>Dongpu Luo</h3>
+                        <p data-i18n="team.researchAssistant">Research Assistant</p>
+                        <small>PolyU COMP</small>
+                    </article>
+                    <article class="team-member reveal" data-reveal="up" data-delay="180">
+                        <img src="img/background/Jerry.png" alt="Jerry Zhang Fu">
+                        <h3>Jerry Zhang Fu</h3>
+                        <p data-i18n="team.researchAssistant">Research Assistant</p>
+                        <small>PolyU COMP</small>
+                    </article>
+                    <article class="team-member reveal" data-reveal="up" data-delay="240">
+                        <img src="img/background/Gina.png" alt="Gina Wujie Gao">
+                        <h3>Gina Wujie Gao</h3>
+                        <p data-i18n="team.researchAssistant">Research Assistant</p>
+                        <small>PolyU APSS</small>
+                    </article>
+                    <article class="team-member reveal" data-reveal="up" data-delay="300">
+                        <img src="img/background/HongMing.png" alt="Hong Ming Ma">
+                        <h3>Hong Ming Ma</h3>
+                        <p data-i18n="team.alumnus">Alumnus</p>
+                        <small>PolyU AMA</small>
+                    </article>
+                </div>
             </div>
+        </section>
+
+        <section class="recognition-section" id="recognition" aria-labelledby="recognition-title" data-parallax>
+            <div class="section-shade"></div>
+            <div class="recognition-inner">
+                <p class="section-number recognition-number reveal" data-reveal="up"
+                    data-i18n="recognition.number">07 / Recognition</p>
+                <div class="recognition-layout">
+                    <aside class="award-panel reveal" data-reveal="left">
+                        <span class="award-icon"><i data-lucide="trophy" aria-hidden="true"></i></span>
+                        <p class="award-year">2025</p>
+                        <p class="award-result" data-i18n="recognition.champion">Champion</p>
+                        <dl class="award-meta">
+                            <div>
+                                <dt data-i18n="recognition.categoryLabel">Category</dt>
+                                <dd data-i18n="recognition.category">Open Category</dd>
+                            </div>
+                            <div>
+                                <dt data-i18n="recognition.streamLabel">Stream</dt>
+                                <dd data-i18n="recognition.stream">Stream 3</dd>
+                            </div>
+                        </dl>
+                    </aside>
+
+                    <div class="recognition-copy reveal" data-reveal="right">
+                        <h2 id="recognition-title" data-i18n="recognition.title">AIREA International Competition on AI
+                            in Education</h2>
+                        <p data-i18n="recognition.body">ESAIAS received the Champion award in the Open Category, Stream
+                            3, recognising a comprehensive generative-AI solution to an educational challenge.</p>
+
+                        <div class="recognition-links" aria-label="Competition links"
+                            data-i18n-aria-label="recognition.linksLabel">
+                            <a href="https://www.polyu.edu.hk/comp/news-and-events/news/2025/0911_airea-award-2025/"
+                                target="_blank" rel="noopener">
+                                <span class="link-icon"><i data-lucide="newspaper" aria-hidden="true"></i></span>
+                                <span data-i18n="recognition.link1">PolyU award announcement</span>
+                                <i class="external-icon" data-lucide="external-link" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://airea.eduhk.hk/competitions/airea-competition-2025/" target="_blank"
+                                rel="noopener">
+                                <span class="link-icon"><i data-lucide="globe-2" aria-hidden="true"></i></span>
+                                <span data-i18n="recognition.link2">AIREA Competition 2025</span>
+                                <i class="external-icon" data-lucide="external-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="section-shade"></div>
+            <div class="contact-content reveal" data-reveal="up">
+                <p class="section-number" data-i18n="contact.number">08 / Connect</p>
+                <h2 id="contact-title" data-i18n="contact.title">Contact Us</h2>
+                <p data-i18n="contact.body">If you are interested in participating, please contact Richard.</p>
+                <a class="contact-link"
+                    href="mailto:richard-chen.li@polyu.edu.hk"><i data-lucide="mail"
+                        aria-hidden="true"></i><span>richard-chen.li@polyu.edu.hk</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="partner-logos" aria-label="Project partners" data-i18n-aria-label="footer.partners">
+            <img src="img/Corporate-Logo_RGB.jpg" alt="The Hong Kong Polytechnic University"
+                data-i18n-alt="footer.polyuAlt">
+            <img src="img/polyu-comp-logo.png" alt="PolyU Department of Computing"
+                data-i18n-alt="footer.compAlt">
+            <img src="img/APSS_logo.png" alt="PolyU Department of Applied Social Sciences"
+                data-i18n-alt="footer.apssAlt">
         </div>
-    </div>
+        <p data-i18n="footer.copyright">&copy; 2025 ESAIAS Team. All rights reserved.</p>
+    </footer>
 </body>
-
-<script>
-
-    window.addEventListener('DOMContentLoaded', function () {
-        new SmartPhoto(".js-smartPhoto");
-    });
-
-    const esaisEle = document.querySelector(".esaias-container");
-    esaisEle.addEventListener("scrollsnapchange", (event) => {
-        document.querySelectorAll(".nav-link").forEach((el) => {
-            el.classList.remove('active');
-        });
-        if (document.querySelector(`#${event.snapTargetBlock.id}-link`) !== null) {
-            document.querySelector(`#${event.snapTargetBlock.id}-link`).classList.add('active');
-            document.querySelector("#mobile-title-label").innerHTML = event.snapTargetBlock.id.toUpperCase() ;
-        }else{
-            document.querySelector("#mobile-title-label").innerHTML = "" ;
-        }
-
-    });
-
-    const videoElement = document.getElementById('bg-video');
-    const totalVideos = 7;
-    const videoFolder = 'videos/';
-    const videoBaseName = 'showcase';
-    let currentVideo = 1;
-
-    function playNextVideo() {
-        const videoPath = `${videoFolder}${videoBaseName}${currentVideo}.mp4`;
-        videoElement.src = videoPath;
-        videoElement.load();
-        videoElement.play();
-        currentVideo = (currentVideo % totalVideos) + 1;
-    }
-    videoElement.addEventListener('ended', playNextVideo);
-    playNextVideo();
-</script>
-
-
-<!-- <script>
-    const layers = document.querySelectorAll('.editor-bg-layer');
-    let currentLayer = 0;
-
-    function showNextEditorImage() {
-        layers.forEach((layer, index) => {
-            layer.classList.toggle('active', index === currentLayer);
-        });
-        currentLayer = (currentLayer + 1) % layers.length;
-    }
-
-    showNextEditorImage();
-    setInterval(showNextEditorImage, 5000);
-</script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-<script src="https://unpkg.com/smartphoto@1.1.0/js/smartphoto.min.js"></script>
 
 </html>
